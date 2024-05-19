@@ -16,7 +16,7 @@ async def main():
         raise ValueError("Nu s-a gasit Tokenul necesar")
 
     await async_main()
-    bot = Bot(token='telegram_bot_token')
+    bot = Bot(token=telegram_bot_token)
     dispatcher = Dispatcher()
     dispatcher.include_router(router)
     await dispatcher.start_polling(bot)
