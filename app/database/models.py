@@ -29,7 +29,7 @@ class Item(Base):
     id: Mapped[int] = mapped_column (primary_key=True)
     name: Mapped[str] = mapped_column (String(25))
     description: Mapped[str] = mapped_column(String(123))
-    price: Mapped [int] = mapped_column(String(123))
+    price: Mapped [str] = mapped_column(String(123))
     category: Mapped[int] = mapped_column(ForeignKey('category.id'))
 
 

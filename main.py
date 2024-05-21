@@ -9,7 +9,7 @@ from app.database.models import async_main
 
 
 async def main():
-    load_dotenv(dotenv_path='hide.env')
+    load_dotenv(dotenv_path='.env')
     telegram_bot_token = os.getenv('TELEGRAM_BOT_TOKEN')
 
     if not telegram_bot_token:
