@@ -4,8 +4,13 @@ from aiogram import Bot, Dispatcher, types
 import os
 from dotenv import load_dotenv
 
+from loggin_config import get_logger
+
 from app.handlers import router
 from app.database.models import async_main
+
+
+logger = get_logger(__name__)
 
 
 async def main():
@@ -17,8 +22,10 @@ async def main():
 
     await async_main()
     bot = Bot(token=telegram_bot_token)
+    logger.info("Botul sa initializat")
     dispatcher = Dispatcher()
     dispatcher.include_router(router)
+    logger.info("Botul a dat start!")
     await dispatcher.start_polling(bot)
     
     

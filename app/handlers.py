@@ -7,7 +7,9 @@ from aiogram.fsm.context import FSMContext
 import app.keyboards as kb
 import app.database.request as rq
 
+from loggin_config import get_logger
 
+logger = get_logger(__name__)
 
 router = Router()
 
